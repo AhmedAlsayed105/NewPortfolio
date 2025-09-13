@@ -1,0 +1,12 @@
+import React from "react";
+
+export default function () {
+  return (
+    <div
+      className="block w-[480px] h-[480px]
+      rounded-full bg-accent/70 absolute -top-[30%] -right-[4%]
+      blur-[300px]
+  "
+    />
+  );
+}

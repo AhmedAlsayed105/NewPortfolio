@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Sometype_Mono } from "next/font/google";
 import "./globals.css";
+import PageTransition from "./PageTransition";
+import RectangleTransition from "./Component/RectangleTransition";
+import Gradient from "./Component/Gradient";
+import Header from "./Component/Header/Header";
+import MainNavbar from "./Component/NavBar/MainNavbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
+const SometypeMono = Sometype_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
@@ -25,9 +25,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={` ${SometypeMono.variable} antialiased overflow-hidden relative`}
       >
-        {children}
+        <Gradient />
+        <RectangleTransition />
+        <div className="flex">
+          <div className=" hidden lg:flex bg-tertiary w-[285px] h-screen">
+            <MainNavbar />
+          </div>
+          <div className="w-full max-w-[1130px] px-[15px] mx-auto ">
+            <Header />
+            <PageTransition>
+              <div>{children}</div>
+            </PageTransition>
+          </div>
+        </div>
       </body>
     </html>
   );
