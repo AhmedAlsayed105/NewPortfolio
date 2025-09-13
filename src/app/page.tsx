@@ -25,7 +25,7 @@ export default function Home() {
       <div className="flex relative  flex-col xl:flex-row items-center justify-between gap-1 w-fit ">
         <div className=" xl:w-[550px] flex flex-col items-center xl:items-start text-center xl:text-left ">
           <h1 className="h1 flex-1 mb-[28px]">
-            Hi! I'm Ahmed
+            Hi! I&apos;m Ahmed
             <br />
             <TypeAnimation
               sequence={["web Developer", 4000, "Front end ", 4000]}

@@ -1,6 +1,4 @@
-import React from "react";
-
-export default function () {
+export default function Gradient() {
   return (
     <div
       className="block w-[480px] h-[480px]
