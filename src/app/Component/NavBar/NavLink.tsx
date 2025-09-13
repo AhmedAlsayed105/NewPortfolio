@@ -1,6 +1,5 @@
 "use client";
-import React from "react";
-import { NavItme, PropNavLink } from "../Types/types";
+import { NavItme, PropNavLink } from "@/app/Types/types";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
