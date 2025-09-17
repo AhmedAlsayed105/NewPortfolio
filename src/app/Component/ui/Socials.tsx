@@ -1,4 +1,4 @@
-import { IpropSocials, Socilas } from "../Types/types";
+import { IpropSocials, Socilas } from "@/app/Types/types";
 import Link from "next/link";
 import { BiLogoFacebook, BiLogoGithub, BiLogoLinkedin } from "react-icons/bi";
 

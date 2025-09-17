@@ -1,14 +1,14 @@
 "use client";
 import { motion } from "framer-motion";
-import Blog from "./Component/Blog";
+import Blog from "./Component/ui/Blog";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { MdArrowOutward, MdFileDownload } from "react-icons/md";
 import { LuPhoneCall } from "react-icons/lu";
 import { CgMail } from "react-icons/cg";
 import Link from "next/link";
-import Socials from "./Component/Socials";
-import Pattern from "./Component/Pattern";
+import Pattern from "./Component/ui/Pattern";
+import Socials from "./Component/ui/Socials";
 
 export default function Home() {
   return (

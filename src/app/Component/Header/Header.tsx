@@ -3,9 +3,9 @@ import Logo from "./Logo";
 
 export default function Header() {
   return (
-    <header className="2xl:hidden absolute z-40 left-0 top-4 right-0 ">
+    <header className="2xl:hidden absolute z-40 left-0 top-4 right-0  backdrop-blur-3xl">
       <div className="container mx-auto">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between ">
           <Logo />
           {/* start nav bar mobil  */}
           <NavMobile />

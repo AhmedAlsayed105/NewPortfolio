@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { Sometype_Mono } from "next/font/google";
 import "./globals.css";
 import PageTransition from "./PageTransition";
-import RectangleTransition from "./Component/RectangleTransition";
-import Gradient from "./Component/Gradient";
+import Gradient from "./Component/ui/Gradient";
 import Header from "./Component/Header/Header";
 import MainNavbar from "./Component/NavBar/MainNavbar";
+import RectangleTransition from "./Component/ui/RectangleTransition";
 
 const SometypeMono = Sometype_Mono({
   variable: "--font-geist-mono",

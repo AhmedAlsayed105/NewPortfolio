@@ -7,7 +7,6 @@ export type PropNavLink = {
 export type IpropSocials = {
   containerStyle: string;
   iconStyle: string;
-
 };
 //
 export type NavItme = {
@@ -17,4 +16,15 @@ export type NavItme = {
 export type Socilas = {
   Icon: IconType;
   to: string | Url;
+}[];
+
+export type TypeTestimonial = {
+  message: string;
+  name: string;
+}[];
+
+export type TypeJourney = {
+years: string;
+role:string;
+institution: string;
 }[];

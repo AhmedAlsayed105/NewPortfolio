@@ -11,9 +11,9 @@ import NavLink from "./NavLink";
 import Logo from "../Header/Logo";
 import { MdFileDownload } from "react-icons/md";
 import Link from "next/link";
-import Socials from "../Socials";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import Socials from "../ui/Socials";
 
 export default function NavMobile() {
   const pathName = usePathname();

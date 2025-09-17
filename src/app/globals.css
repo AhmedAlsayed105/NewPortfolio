@@ -140,4 +140,7 @@ h4 {
   }
 } 
 
- 
+ /* swiper */
+.swiper {
+  margin: 0  !important;
+}
