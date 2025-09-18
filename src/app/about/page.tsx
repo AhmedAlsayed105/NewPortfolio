@@ -7,6 +7,8 @@ import Testimonial from "../Component/ui/Testimonial";
 import Info from "../Component/ui/Info";
 import Journey from "../Component/ui/Journey";
 import Skills from "../Component/ui/Skills";
+import Image from "next/image";
+import Blog from "../Component/ui/Blog";
 export default function About() {
   return (
     <motion.section
@@ -17,14 +19,27 @@ export default function About() {
       }}
       className="h-screen flex itemss-center"
     >
-      <div className=" mx-auto px-0">
-        <div className="flex flex-col container xl:flex-row items-center gap-24 w-full  h-[680px]">
+      <div className="container mx-auto px-0">
+        <div className="flex flex-col  xl:flex-row items-center gap-24 w-full  h-[680px]">
           {/* img & social icon */}
-          <div className="hidden xl:flex w-full h-full pt-14 max-w-[430px] relative bg-pink-50/10">
-            1
+          <div className=" hidden xl:flex w-full h-fit pt-1 max-w-[430px] relative">
+            <div className="relative  ">
+              <Blog containerStyles="w-[460px] h-[460px] " />
+              <Image
+                width={300}
+                height={300}
+                alt="my-photo"
+                src="/assets/ahmed.png"
+                className="absolute top-[12px] left-[100px]"
+              />
+              <div
+                className="absolute w-full h-[164px]  bottom-0 #0D091A
+              right-0 bg-gradient-to-t from-primary via-primary/90 to-primary/0"
+              ></div>
+            </div>
           </div>
           {/* scroll area */}
-          <ScrollArea className="max-w-[500px] h-[680px]  ">
+          <ScrollArea className="max-w-[500px] h-[580px]  ">
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-2 h-2 bg-accent rounded-full"></div>

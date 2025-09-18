@@ -24,7 +24,12 @@ export type TypeTestimonial = {
 }[];
 
 export type TypeJourney = {
-years: string;
-role:string;
-institution: string;
+  years: string;
+  role: string;
+  institution: string;
+}[];
+
+export type TypeSkills = {
+  Icon: IconType;
+  name: string;
 }[];

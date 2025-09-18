@@ -24,10 +24,10 @@ const testimonial: TypeTestimonial = [
 export default function Testimonial() {
   return (
     <Swiper
-      modules={[Autoplay]}
-      loop={true}
-      autoplay={{ delay: 4000, disableOnInteraction: false }}
-      className="w-full max-w-[300px] sm:max-w-[400px]  md:max-w-[520px]   rounded-lg"
+      // modules={[Autoplay]}
+      // loop={true}
+      // autoplay={{ delay: 4000, disableOnInteraction: false }}
+      className="w-full max-w-[300px] sm:max-w-[400px]  md:max-w-[520px] bg-secondary  overflow-hidden  rounded-lg"
     >
       {testimonial.map((person, idx) => {
         return (
