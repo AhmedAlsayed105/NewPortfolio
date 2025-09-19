@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Sometype_Mono } from "next/font/google";
 import "./globals.css";
 import PageTransition from "./PageTransition";
-import Gradient from "./Component/ui/Gradient";
 import Header from "./Component/Header/Header";
 import MainNavbar from "./Component/NavBar/MainNavbar";
 import RectangleTransition from "./Component/ui/RectangleTransition";
@@ -27,7 +26,6 @@ export default function RootLayout({
       <body
         className={` ${SometypeMono.variable} antialiased overflow-hidden relative`}
       >
-        <Gradient />
         <RectangleTransition />
         <div className="flex">
           <div className=" hidden lg:flex bg-tertiary w-[285px] h-screen">

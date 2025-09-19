@@ -61,8 +61,8 @@ export default function Skills() {
           return (
             <TooltipProvider key={idx}>
               <Tooltip>
-                <TooltipTrigger className="w-16 h-1/6 rounded-full flex justify-center items-center bg-tertiary/70 hover:text-accent transition-all duration-300">
-                  <Icon className=" text-3xl " />
+                <TooltipTrigger className="w-16 h-1/6 rounded-full flex justify-center items-center bg-tertiary/70  hover:text-accent transition-all duration-300">
+                  <Icon className=" text-3xl cursor-pointer " />
                 </TooltipTrigger>
                 <TooltipContent>
                   <div className="text-xl">{name}</div>

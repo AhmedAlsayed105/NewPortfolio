@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Blog from "./Component/ui/Blog";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
-import { MdArrowOutward, MdFileDownload } from "react-icons/md";
+import { MdFileDownload } from "react-icons/md";
 import { LuPhoneCall } from "react-icons/lu";
 import { CgMail } from "react-icons/cg";
 import Link from "next/link";
@@ -18,11 +18,11 @@ export default function Home() {
         opacity: 1,
         transition: { delay: 0.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="h-screen flex items-center"
+      className="h-screen w-fit flex items-center "
     >
       {/*Start Blog Text */}
       <Pattern />
-      <div className="flex relative  flex-col xl:flex-row items-center justify-between gap-1 w-fit ">
+      <div className="flex relative  flex-col xl:flex-row items-center justify-between gap-1 w-[100%]  ">
         <div className=" xl:w-[550px] flex flex-col items-center xl:items-start text-center xl:text-left ">
           <h1 className="h1 flex-1 mb-[28px]">
             Hi! I&apos;m Ahmed
