@@ -34,7 +34,7 @@ export default function RootLayout({
           <div className="w-full max-w-[1130px] px-[15px] mx-auto ">
             <Header />
             <PageTransition>
-              <div>{children}</div>
+              <div >{children}</div>
             </PageTransition>
           </div>
         </div>

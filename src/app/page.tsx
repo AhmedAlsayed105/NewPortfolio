@@ -18,11 +18,11 @@ export default function Home() {
         opacity: 1,
         transition: { delay: 0.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="h-screen w-fit flex items-center "
+      className="h-screen flex items-center"
     >
       {/*Start Blog Text */}
       <Pattern />
-      <div className="flex relative  flex-col xl:flex-row items-center justify-between gap-1 w-[100%]  ">
+      <div className="flex relative  flex-col xl:flex-row items-center justify-between gap-1 w-fit h-[80vh]  ">
         <div className=" xl:w-[550px] flex flex-col items-center xl:items-start text-center xl:text-left ">
           <h1 className="h1 flex-1 mb-[28px]">
             Hi! I&apos;m Ahmed
