@@ -33,3 +33,8 @@ export type TypeSkills = {
   Icon: IconType;
   name: string;
 }[];
+export type TypeServices = {
+  icon: string;
+  herf: string;
+  title: string;
+}[];
