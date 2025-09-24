@@ -1,3 +1,4 @@
+import { number } from "framer-motion";
 import { IconType } from "react-icons";
 import { Url } from "url";
 //
@@ -38,3 +39,14 @@ export type TypeServices = {
   herf: string;
   title: string;
 }[];
+export type TypeProject = {
+  id: number;
+  category: string;
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+  github: string;
+  tech: string[];
+}[];
+
