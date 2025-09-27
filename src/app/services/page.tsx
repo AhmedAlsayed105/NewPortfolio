@@ -43,7 +43,7 @@ export default function Services() {
       }}
       className="h-screen flex items-center "
     >
-      <div className="container mx-auto  flex flex-col gap-16  max-w-[1000px] h-screen">
+      <div className="container mx-auto  flex flex-col sm:justify-center gap-16  max-w-[1000px] h-screen">
         {/* Text */}
         <div className="flex flex-col xl:flex-row justify-between items-start xl:items-center gap-8  max-w-[1000px] ">
           <h2 className="h2 max-w-[480px]  text-left xl:mb-0">

@@ -19,7 +19,8 @@ const projects: TypeProject = [
     category: "Next Js",
     title: "Portfile",
     description: "Next + Tailwind landing page",
-    image: "assets/project/",
+    // image: "assets/project/",
+    image: "/assets/project/Big2-ecommerc.png",
     link: "https://ahmed-alsayed.vercel.app/",
     github: "",
     tech: ["Next Js", "Tailwind css", "Frmamer Motion", "Ui shadcn."],
@@ -29,7 +30,7 @@ const projects: TypeProject = [
     category: "React Js",
     title: "Big-Ecommerce",
     description: "React + Tailwind + Material Ui",
-    image: "/assets/project/Big-ecommerc.png",
+    image: "/assets/project/Big2-ecommerc.png",
     link: "https://big-ecommerce-cb675.web.app/",
     github: "https://github.com/AhmedAlsayed105/Big-e-comerice",
     tech: ["React", "Tailwind css", "Frmamer Motion"],
@@ -39,7 +40,7 @@ const projects: TypeProject = [
     category: "React Js",
     title: "Smail-Ecommerce",
     description: "React + Tailwind landing page",
-    image: "assets/project/p-10.png",
+    image: "/assets/project/p-10.png",
     link: "https://ecomerc-eighthourd.web.app/",
     github: "https://github.com/AhmedAlsayed105/ecommerc-8hours",
     tech: ["React", "Tailwind css", "Material Ui"],
@@ -49,7 +50,7 @@ const projects: TypeProject = [
     category: "JavaScript",
     title: "landing Page",
     description: "Html Css JavaScript",
-    image: "assets/project/Big-ecommerc.png",
+    image: "/assets/project/Big2-ecommerc.png",
     link: "https://ahmedalsayed105.github.io/special-Design/",
     github: "https://github.com/AhmedAlsayed105/special-Design",
     tech: ["Html", "css", "JavaScript"],
@@ -59,7 +60,7 @@ const projects: TypeProject = [
     category: "JavaScript",
     title: "Product_management",
     description: "Html Css JavaScript",
-    image: "assets/project/p-4.png",
+    image: "/assets/project/p-4.png",
     link: "https://ahmedalsayed105.github.io/Product_management/",
     github: "https://github.com/AhmedAlsayed105/Product_management",
     tech: ["Html", "Css", "JavaScript"],
@@ -69,7 +70,7 @@ const projects: TypeProject = [
     category: "JavaScript",
     title: "youtub-clone",
     description: "React + Tailwind landing page",
-    image: "assets/project/p-11.png",
+    image: "/assets/project/p-11.png",
     link: "https://youtub-clone-1f141.web.app/",
     github: "https://github.com/AhmedAlsayed105/Youtub_colone",
     tech: ["Html", "Css", "JavaScript", "TypeScript"],
@@ -79,7 +80,7 @@ const projects: TypeProject = [
     category: "React Js",
     title: "landing Page",
     description: "React + Tailwind landing page",
-    image: "assets/project/p-9.png",
+    image: "/assets/project/p-9.png",
     link: "https://ahmedalsayed105.github.io/Fylo-React/",
     github: "https://github.com/AhmedAlsayed105/Fylo-React",
     tech: ["React", "Tailwind css"],
@@ -89,7 +90,7 @@ const projects: TypeProject = [
     category: "Html Css",
     title: "landing Page",
     description: "Html Css ",
-    image: "assets/project/p-6.png",
+    image: "/assets/project/p-6.png",
     link: "https://ahmedalsayed105.github.io/Templat_3/",
     github: "https://github.com/AhmedAlsayed105/Templat_3",
     tech: ["Html", "Css"],
@@ -99,7 +100,7 @@ const projects: TypeProject = [
     category: "Html Css",
     title: "Html Css",
     description: "Html Css landing page",
-    image: "assets/project/p-7.png",
+    image: "/assets/project/p-7.png",
     link: "https://ahmedalsayed105.github.io/Templat_2/",
     github: "https://github.com/AhmedAlsayed105/Templat_2",
     tech: ["Html", "Css"],
@@ -116,22 +117,24 @@ export default function Work() {
         opacity: 1,
         transition: { delay: 1.0, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-screen flex items-center py-8 xl:py-0"
+      className="  flex items-center lg:py-8 xl:py-8"
     >
-      <div className="container mx-auto w-full h-[75%] flex flex-col justify-center  ">
+      <div className="container mx-auto w-full   flex flex-col justify-center ">
         {/* heading
          */}
         <h2 className="h2 mb-6 xl:mb-12 max-w-[600px]">
           My Latest <span className="text-accent">Work</span>
         </h2>
         {/* tabs */}
+
         <Tabs
           defaultValue="frontend"
           className="w-full flex flex-col gap-2 sm:gap-6 xl:gap-12"
         >
           <TabsList
             className="flex flex-wrap justify-center items-center gap-4
-          h-full xl:mb-0
+           mb-50 sm:mb-18 xl:mb-0 
+           
           "
           >
             {categories.map((category, idx) => {
@@ -155,11 +158,9 @@ export default function Work() {
                     {projects
                       .filter((project) => project.category === category)
                       .map((project) => {
+                        console.log(project.image);
                         return (
-                          <SwiperSlide
-                            key={project.id}
-                            className="  h-[100hv] "
-                          >
+                          <SwiperSlide key={project.id} className="   ">
                             <div className="flex flex-col xl:flex-row gap-8 xl:gap-12">
                               {/* project Info */}
                               <div className="w-full  max-w-[380px] flex flex-col gap-6 xl:gap-8 xl:pt-6 order-2 xl:order-none">
@@ -173,7 +174,7 @@ export default function Work() {
                                       return (
                                         <li
                                           key={idx}
-                                          className="flex items-center gap-4 bg-[#a883ff]/13 h-[28px] px-[14px] rounded-full"
+                                          className="flex items-center gap-4 bg-[#a883ff]/13 h-[18px] px-[10px] rounded-full"
                                         >
                                           {item}
                                         </li>
@@ -181,15 +182,27 @@ export default function Work() {
                                     })}
                                   </ul>
                                 </div>
+                                {/* butns */}
+                                <div>
+                                  <Link href={project.link}>
+                                    <button className="btn btn-sm btn-accent flex gap-2">
+                                      Live Project
+                                    </button>
+                                  </Link>
+                                </div>
                               </div>
                               {/* project Img */}
                               <div
-                                className="w-full h-[200px] md:h-[300px] xl:h-[400px]
+                                className="w-full h-[200px] md:h-[300px] xl:h-[350px]
                               relative bg-pink-50/10 order-1 
-                              xl:order-none rounded-lg overflow-hidden
-                              "
+                              xl:order-none rounded-lg overflow-hidden"
                               >
-                                project image
+                                <Image
+                                  src={project.image}
+                                  alt={project.image}
+                                  fill
+                                  className="object-cover"
+                                />
                               </div>
                             </div>
                           </SwiperSlide>

@@ -49,4 +49,3 @@ export type TypeProject = {
   github: string;
   tech: string[];
 }[];
-

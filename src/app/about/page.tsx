@@ -20,9 +20,9 @@ export default function About() {
       className="h-screen flex itemss-center"
     >
       <div className="container mx-auto px-0">
-        <div className="flex flex-col  xl:flex-row items-center gap-24 w-full  h-[680px]">
+        <div className="flex flex-col  xl:flex-col 2xl:flex-row items-center gap-24 w-full  h-[680px]">
           {/* img & social icon */}
-          <div className=" hidden xl:flex w-full h-fit pt-1 max-w-[430px] relative">
+          <div className=" hidden xl:flex  w-full h-fit pt-1 max-w-[430px] relative">
             <div className="relative  ">
               <Blog containerStyles="w-[460px] h-[460px] " />
               <Image

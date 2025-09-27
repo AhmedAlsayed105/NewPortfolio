@@ -22,7 +22,7 @@ export default function Home() {
     >
       {/*Start Blog Text */}
       <Pattern />
-      <div className="flex relative  flex-col xl:flex-row items-center justify-between gap-1 w-fit h-[80vh]  ">
+      <div className="flex   flex-col xl:flex-row items-center justify-between gap-1 w-fit  container absolute left-0 ">
         <div className=" xl:w-[550px] flex flex-col items-center xl:items-start text-center xl:text-left ">
           <h1 className="h1 flex-1 mb-[28px]">
             Hi! I&apos;m Ahmed

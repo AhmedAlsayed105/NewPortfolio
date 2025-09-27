@@ -30,7 +30,7 @@ export default function NavMobile() {
         </SheetTrigger>
         <SheetContent
           className="w-[300px] sm:w-[350px]
-                  bg-primary border-0
+                  bg-primary 
                     flex-col justify-between items-center 
                     pt-16 pb-20"
           side="left"
