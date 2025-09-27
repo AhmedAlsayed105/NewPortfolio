@@ -133,7 +133,7 @@ export default function Work() {
         >
           <TabsList
             className="flex flex-wrap justify-center items-center gap-4
-           mb-50 sm:mb-18 xl:mb-0 
+           mb-30 sm:mb-18 xl:mb-0 
            
           "
           >
@@ -183,10 +183,17 @@ export default function Work() {
                                   </ul>
                                 </div>
                                 {/* butns */}
-                                <div>
+                                <div className="flex flex-col sm:flex-row gap-2 mb-2">
                                   <Link href={project.link}>
                                     <button className="btn btn-sm btn-accent flex gap-2">
-                                      Live Project
+                                      <MdArrowOutward />
+                                      <span>Live Project</span>
+                                    </button>
+                                  </Link>
+                                  <Link href={project.github}>
+                                    <button className="btn btn-sm btn-white flex gap-2">
+                                      <FaGithub />
+                                      <>Github Repo</>
                                     </button>
                                   </Link>
                                 </div>
