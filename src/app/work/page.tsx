@@ -183,15 +183,15 @@ export default function Work() {
                                   </ul>
                                 </div>
                                 {/* butns */}
-                                <div className="flex flex-col sm:flex-row gap-2 mb-2">
+                                <div className="flex  flex-row gap-2 mb-2">
                                   <Link href={project.link}>
-                                    <button className="btn btn-sm btn-accent flex gap-2">
+                                    <button className="btn w-[135px] sm:btn-sm  btn-accent flex gap-2">
                                       <MdArrowOutward />
                                       <span>Live Project</span>
                                     </button>
                                   </Link>
                                   <Link href={project.github}>
-                                    <button className="btn btn-sm btn-white flex gap-2">
+                                    <button className="btn w-[135px] sm:btn-sm  btn-white flex gap-2">
                                       <FaGithub />
                                       <>Github Repo</>
                                     </button>

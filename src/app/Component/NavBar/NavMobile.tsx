@@ -25,14 +25,14 @@ export default function NavMobile() {
   return (
     <div>
       <Sheet open={open} onOpenChange={setOpen}>
-        <SheetTrigger className="lg:hidden text-[35px] cursor-pointer text-white">
+        <SheetTrigger className="lg:hidden text-[35px] cursor-pointer text-white ">
           <CiMenuFries className="cursor-pointer" />
         </SheetTrigger>
         <SheetContent
           className="w-[300px] sm:w-[350px]
-                  bg-primary 
+                  bg-primary border-none 
                     flex-col justify-between items-center 
-                    pt-16 pb-20"
+                    pt-16 pb-20 "
           side="left"
         >
           <SheetHeader className="flex items-center">
