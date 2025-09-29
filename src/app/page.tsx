@@ -31,7 +31,7 @@ export default function Home() {
               sequence={["web Developer", 4000, "Front end ", 4000]}
               wrapper="span"
               speed={40}
-              className="text-accent "
+              className="text-accent p-2.5 "
               repeat={Infinity}
               cursor={false}
             />

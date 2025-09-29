@@ -134,9 +134,9 @@ export default function Work() {
           <TabsList
             className="flex flex-wrap justify-center items-center gap-4
            mb-30 sm:mb-18 xl:mb-0 
-           
           "
           >
+            {/* tabs List */}
             {categories.map((category, idx) => {
               return (
                 <TabsTrigger
@@ -150,7 +150,7 @@ export default function Work() {
             })}
           </TabsList>
           {/* tabcontent */}
-          <div>
+          <div className="h-[400px] scrollbar scrollbar-thumb-accent scrollbar-track-accent/5 overflow-y-scroll xl:overflow-y-visible">
             {categories.map((category, idx) => {
               return (
                 <TabsContent key={idx} value={category}>
