@@ -5,6 +5,8 @@ import PageTransition from "./PageTransition";
 import Header from "./Component/Header/Header";
 import MainNavbar from "./Component/NavBar/MainNavbar";
 import RectangleTransition from "./Component/ui/RectangleTransition";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SometypeMono = Sometype_Mono({
   variable: "--font-geist-mono",
@@ -36,6 +38,16 @@ export default function RootLayout({
             <Header />
             <PageTransition>
               <div>{children}</div>
+              <ToastContainer
+                position="top-right"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                pauseOnHover
+                draggable
+                style={{ width: "300px", height: "60px" }}
+              />
             </PageTransition>
           </div>
         </div>

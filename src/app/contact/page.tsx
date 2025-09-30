@@ -16,7 +16,7 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 import { FormData } from "../Types/types";
 import emailjs from "emailjs-com";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function Contact() {
@@ -89,20 +89,8 @@ export default function Contact() {
       }}
       className="h-screen flex items-center py-24 xl:py-0 "
     >
-      <ToastContainer
-        position="top-right"
-        autoClose={3000} // مدة ظهور التوست بالمللي ثانية
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        style={{ width: "320px", height: "60px" }}
-      />
       <div
-        className="container mx-auto w-full  flex flex-col items-center mt-50 s
+        className="container mx-auto w-full  flex flex-col items-center mt-50 xl:mt-20
       justify-center xl:overflow-hidden scrollbar scrollbar-thumb-accent scrollbar-track-accent/5 overflow-y-scroll xl:overflow-y-visible"
       >
         <div className="w-full">
