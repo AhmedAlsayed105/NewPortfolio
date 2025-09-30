@@ -2,7 +2,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import React, { ReactNode } from "react";
-import { Label } from "@/components/ui/label";
 type Iprop = {
   children: ReactNode;
 };

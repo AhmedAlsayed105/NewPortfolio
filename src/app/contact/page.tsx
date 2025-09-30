@@ -141,7 +141,7 @@ export default function Contact() {
                     focus-visible:border-accent focus-visible:ring-accent focus-visible:ring-[1px] resize-none p-4
                     selection:bg-accent placeholder:text-white/50
                     "
-                  ></Textarea>
+                  />
                 </div>
                 {/* btn */}
                 <button className="btn btn-lg btn-accent my-6">
