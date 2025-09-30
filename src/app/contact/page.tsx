@@ -111,7 +111,8 @@ export default function Contact() {
                 {/* select */}
                 <div className="w-full mb-6">
                   <Label htmlFor="name" className="">
-                    I'm interested in <span className="text-accent">* </span>
+                    {"I'm interested in"}
+                    <span className="text-accent">* </span>
                   </Label>
                   <Select>
                     <SelectTrigger
