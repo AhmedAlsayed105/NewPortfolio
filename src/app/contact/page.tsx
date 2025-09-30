@@ -13,7 +13,73 @@ import {
 import { HiOutlineMapPin, HiOutlineArrowLongRight } from "react-icons/hi2";
 import { HiOutlinePhone, HiOutlineMail } from "react-icons/hi";
 import Link from "next/link";
+import { useRef, useState } from "react";
+import { FormData } from "../Types/types";
+import emailjs from "emailjs-com";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export default function Contact() {
+  // tostar
+  const showToastMessageSuccess = () => {
+    toast.success("Done sent successfully !", {
+      position: "top-right",
+    });
+  };
+  const showToastMessageErro = () => {
+    toast.error("You are not connected to the Internet!", {
+      position: "top-right",
+    });
+  };
+  // form data
+  const [formData, setFormData] = useState<FormData>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+  });
+
+  const form = useRef<HTMLFormElement>(null);
+
+  console.log(formData);
+  // handelChane
+  const handelChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  // handeSubmite
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!form.current) return;
+
+    emailjs
+      .sendForm(
+        "service_k8l7iqs", // EmailJS
+        "template_imxb39m", // EmailJS
+        form.current,
+        "3xRDPQDY0MsbvymF7" // EmailJS
+      )
+      .then(
+        () => {
+          showToastMessageSuccess();
+          form.current?.reset();
+          setFormData({
+            firstName: "",
+            lastName: "",
+            email: "",
+            message: "",
+          });
+        },
+        () => {
+          showToastMessageErro();
+        }
+      );
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -23,6 +89,18 @@ export default function Contact() {
       }}
       className="h-screen flex items-center py-24 xl:py-0 "
     >
+      <ToastContainer
+        position="top-right"
+        autoClose={3000} // مدة ظهور التوست بالمللي ثانية
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        style={{ width: "320px", height: "60px" }}
+      />
       <div
         className="container mx-auto w-full  flex flex-col items-center mt-50 s
       justify-center xl:overflow-hidden scrollbar scrollbar-thumb-accent scrollbar-track-accent/5 overflow-y-scroll xl:overflow-y-visible"
@@ -62,7 +140,7 @@ export default function Contact() {
             </div>
             {/* form */}
             <div className="flex-1">
-              <form>
+              <form ref={form} onSubmit={sendEmail}>
                 <div className="flex flex-col xl:flex-row gap-3 w-full ">
                   <div className=" w-full mb-6">
                     <Label htmlFor="firstName" className="text-accent">
@@ -74,6 +152,8 @@ export default function Contact() {
                     <Input
                       id="firstName"
                       name="firstName"
+                      value={formData.firstName}
+                      onChange={handelChange}
                       placeholder="FirstName"
                       required
                     />
@@ -89,6 +169,8 @@ export default function Contact() {
                       id="lastName"
                       name="lastName"
                       placeholder="LastName"
+                      value={formData.lastName}
+                      onChange={handelChange}
                       required
                     />
                   </div>
@@ -102,9 +184,11 @@ export default function Contact() {
                     *
                   </Label>
                   <Input
-                    id="Email"
-                    name="Email"
+                    id="email"
+                    name="email"
                     placeholder="yourEmail@gmail.com"
+                    value={formData.email}
+                    onChange={handelChange}
                     required
                   />
                 </div>
@@ -142,10 +226,12 @@ export default function Contact() {
                     focus-visible:border-accent focus-visible:ring-accent focus-visible:ring-[1px] resize-none p-4
                     selection:bg-accent placeholder:text-white/50
                     "
+                    value={formData.message}
+                    onChange={handelChange}
                   />
                 </div>
                 {/* btn */}
-                <button className="btn btn-lg btn-accent my-6">
+                <button type="submit" className="btn btn-lg btn-accent my-6">
                   <div className="flex items-center gap-3">
                     <span className="font-medium">Send message</span>
                     <HiOutlineArrowLongRight className="text-xl" />

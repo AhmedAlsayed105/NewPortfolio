@@ -26,11 +26,6 @@ const services: TypeServices = [
     herf: "",
     title: "Search Engine Optimization",
   },
-  {
-    icon: "/assets/services/video.svg",
-    herf: "",
-    title: "Video Production",
-  },
 ];
 
 export default function Services() {

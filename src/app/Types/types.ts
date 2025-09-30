@@ -48,3 +48,9 @@ export type TypeProject = {
   github: string;
   tech: string[];
 }[];
+export interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  message: string;
+}
