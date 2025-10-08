@@ -40,7 +40,7 @@ export default function NavMobile() {
 
             <NavLink containerStyles="flex flex-col gap-8 max-w-[100px] mb-10" />
 
-            <Link href="/assets/AhmedAlsayed-FrontEnd.pdf">
+            <Link href="/assets/AhmedAlsayed_Front_end (1).pdf">
               <button className="btn btn-lg btn-teriary mb-16">
                 <div className="flex items-center gap-3 bg-accent p-[10px] rounded-full ">
                   <span>Download CV</span>
